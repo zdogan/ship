@@ -1,0 +1,27 @@
+from random import randint
+
+l = []
+
+
+for x in range(5):
+    l.append(["_"] * 5)
+
+
+def grid(l):
+    for row in l:
+        print((" ").join(row))
+
+
+grid(l)
+
+row = randint(0, 4)
+col = randint(0, len(l[0]) - 1)
+# - pu number 1
+              
+r = int(input("ROW: "))
+c = int(input("COL: "))
+
+if r == row and c == col:
+    print("HIT")
+else:
+     print("MISS, IT WAS ON ROW",row,"AND COLUMN",col)  
